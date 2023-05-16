@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import style from './styles/Books.module.css';
 
 const BookForm = ({ onAdd }) => {
@@ -51,6 +52,10 @@ const BookForm = ({ onAdd }) => {
       </form>
     </div>
   );
+};
+
+BookForm.propTypes = {
+  onAdd: PropTypes.func.isRequired,
 };
 
 export default BookForm;
