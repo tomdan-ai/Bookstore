@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import style from './styles/Books.module.css';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
+
 
 const BookForm = ({ onAdd }) => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
   const [writer, setWriter] = useState('');
 
+  const dispatch = useDispatch();
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newBook = {
+    dispatch(addBook({
       id: Math.random().toString(),
       title,
       category,
       writer,
-      progress: 0,
-      chapter: 'Chapter 1',
-    };
-    onAdd(newBook);
+    }))
+    
+    onAdd(addBook);
     setTitle('');
     setCategory('');
     setWriter('');

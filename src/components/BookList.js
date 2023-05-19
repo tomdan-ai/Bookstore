@@ -19,7 +19,7 @@ const BookList = () => {
   if (status === 'failed') {
     return (
       <div>
-        Erro while fetching books
+        Error while fetching books
       </div>
     );
   }
