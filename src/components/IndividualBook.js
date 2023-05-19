@@ -3,17 +3,11 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/booksSlice';
 
-const IndividualBook = ({ book, onDelete }) => {
+const IndividualBook = ({ book }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(removeBook(book.item_id))
-      .then(() => {
-        onDelete();
-      })
-      .catch((error) => {
-        console.warn('Error occurred while removing book:', error);
-      });
+    dispatch(removeBook(book.item_id));
   };
 
   return (
@@ -29,7 +23,7 @@ const IndividualBook = ({ book, onDelete }) => {
         {' '}
         {book.category}
       </p>
-      <button onClick={handleDelete} type="button">Remove</button>
+      <button onClick={handleDelete} type="submit">Remove</button>
     </div>
   );
 };
@@ -41,7 +35,6 @@ IndividualBook.propTypes = {
     author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }).isRequired,
-  onDelete: PropTypes.func.isRequired,
 };
 
 export default IndividualBook;
