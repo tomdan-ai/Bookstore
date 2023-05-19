@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import style from './styles/Books.module.css';
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
+import style from './styles/Books.module.css';
 import { addBook } from '../redux/books/booksSlice';
 
-
-const BookForm = ({ onAdd }) => {
+const BookForm = () => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
-  const [writer, setWriter] = useState('');
+  const [author, setAuthor] = useState('');
 
   const dispatch = useDispatch();
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addBook({
-      id: Math.random().toString(),
+      item_id: uuidv4(),
       title,
       category,
-      writer,
-    }))
-    
-    onAdd(addBook);
+      author,
+    }));
+
     setTitle('');
+    setAuthor('');
     setCategory('');
-    setWriter('');
   };
 
   return (
@@ -50,17 +47,13 @@ const BookForm = ({ onAdd }) => {
         <input
           type="text"
           placeholder="Writer"
-          value={writer}
-          onChange={(e) => setWriter(e.target.value)}
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
         />
         <button className={style.addBtn} type="submit">ADD BOOK</button>
       </form>
     </div>
   );
-};
-
-BookForm.propTypes = {
-  onAdd: PropTypes.func.isRequired,
 };
 
 export default BookForm;
