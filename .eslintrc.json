@@ -19,6 +19,7 @@
     "react/react-in-jsx-scope": "off",
     "camelcase": "off",
     "jsx-a11y/no-noninterac": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off"
   },
