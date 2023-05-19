@@ -15,13 +15,15 @@ const IndividualBook = ({ book }) => {
       <h2>{book.title}</h2>
       <p>
         Author:
+        {' '}
         {book.author}
       </p>
       <p>
         Category:
+        {' '}
         {book.category}
       </p>
-      <button onClick={handleDelete} type="button">Remove</button>
+      <button onClick={handleDelete} type="submit">Remove</button>
     </div>
   );
 };
