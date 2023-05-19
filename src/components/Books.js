@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import BookList from './BookList';
 import BookForm from './BookForm';
 import { addBook, removeBook } from '../redux/books/booksSlice';
+import style from './styles/Books.module.css';
 
 const Books = () => {
   const dispatch = useDispatch();
@@ -18,9 +19,10 @@ const Books = () => {
 
   return (
     <div>
-      <h1>Bookstore</h1>
-      <BookList books={books} onDelete={handleDeleteBook} />
-      <BookForm onAdd={handleAddBook} />
+      <div className={style.cover}>
+        <BookList books={books} onDelete={handleDeleteBook} />
+        <BookForm onAdd={handleAddBook} />
+      </div>
     </div>
   );
 };

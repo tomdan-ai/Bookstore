@@ -12,6 +12,16 @@
   gap: 20px;
 }
 
+.nava {
+  color: #121212;
+  text-decoration: none;
+}
+
+.nava:active {
+  color: #00f;
+  text-decoration: none;
+}
+
 .navli {
   list-style-type: none;
   opacity: 0.5;
