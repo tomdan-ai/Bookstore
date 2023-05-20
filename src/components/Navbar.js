@@ -8,8 +8,8 @@ const Navbar = () => (
     <nav className={style.navbar}>
       <ul className={style.navul}>
         <li className={style.navli1}>Bookstore CMS</li>
-        <Link to="/"><li className={style.navli}>BOOKS</li></Link>
-        <Link to="/categories"><li className={style.navli}>CATEGORIES</li></Link>
+        <Link className={style.nava} to="/"><li className={style.navli}>BOOKS</li></Link>
+        <Link className={style.nava} to="/categories"><li className={style.navli}>CATEGORIES</li></Link>
         <button className={style.person} type="button">
           <FaUser height={20} width={40} color="#0290ff" />
           .
