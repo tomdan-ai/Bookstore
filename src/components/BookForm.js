@@ -27,6 +27,7 @@ const BookForm = () => {
 
   return (
     <div className={style.addBook}>
+      <div className={style.div} />
       <h1>ADD NEW BOOK</h1>
       <form onSubmit={handleSubmit} className={style.form}>
         <input
