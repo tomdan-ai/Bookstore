@@ -52,6 +52,26 @@ This is a web app that runs on APIs, it generates math quotes and has an in buil
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+- [Live Demo Link](https://yaredtekle022.github.io/javascript-capstone/dist/)
+
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+- [Live Demo Link](https://react-bookstore-1576.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
